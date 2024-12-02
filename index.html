@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirección QR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // Captura el parámetro 'codigo' de la URL
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get("codigo");
+    if (codigo) {
+      // Redirige al script de Google Apps Script
+      window.location.href = `https://script.google.com/macros/s/AKfycbwt2zJPxxOqMWOXPS_IlCZXiaJ1ciZ-2Jm3GuCidnhXaQZVi1zQBnWULoDTe6Eho_5d/exec?codigo=${codigo}`;
+    } else {
+      document.body.innerHTML = "<h1>Parámetro 'codigo' no encontrado</h1>";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirigiendo...</p>
+</body>
+</html>
